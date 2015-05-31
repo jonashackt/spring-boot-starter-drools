@@ -1,0 +1,31 @@
+//created on: 28.05.2015
+package plausibcheck.adress
+
+//list any import classes here.
+import de.codecentric.drools.test.model.Address
+import de.codecentric.drools.test.model.Order
+
+//declare any global variables here
+
+
+rule "Postcode should be filled with exactly 5 numbers"
+
+    when
+        // conditions
+        Address(postcode != null, postcode matches "([0-9]{5})")
+    then
+        //actions
+		System.out.println("Rule applied, men!");
+		//results.applyResult("postcode", "INVALID", "Name should be in uppercase");
+end
+
+rule "When Order is submitted, the state 2 ship 2 should must exaclty match the Adress state"
+
+    when
+        // conditions
+        address: Address($addressstate : state)
+        order: Order(state2ship2 == $addressstate)
+    then
+        //actions
+		System.out.println("The States are equal, so let's ship the product!");
+end

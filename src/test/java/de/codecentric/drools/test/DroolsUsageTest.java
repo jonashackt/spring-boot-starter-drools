@@ -75,7 +75,7 @@ public class DroolsUsageTest {
         int ruleFiredCount = kieSession.fireAllRules();
                 
         // Then     
-        assertEquals("there´s 1 rule, thats meets the condition, so there should be 1 applied", 1, ruleFiredCount);
+        assertEquals("there are 2 rules, which meet the condition, so there should be 2 applied", 2, ruleFiredCount);
         LOG.debug("Rules checked: {}" + ruleFiredCount);
     }
     

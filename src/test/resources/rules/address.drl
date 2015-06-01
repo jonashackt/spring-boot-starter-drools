@@ -19,7 +19,7 @@ rule "Postcode should be filled with exactly 5 numbers"
 		//results.applyResult("postcode", "INVALID", "Name should be in uppercase");
 end
 
-rule "When Order is submitted, the state 2 ship 2 should must exaclty match the Adress state"
+rule "When Order is submitted, the state 2 ship 2 should must exaclty match the Address state"
 
     when
         // conditions

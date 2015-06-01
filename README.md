@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jonashackt/spring-boot-starter-drools.svg?branch=master)](https://travis-ci.org/jonashackt/spring-boot-starter-drools)
+
 # spring-boot-starter-drools
 Spring Boot Starter for booting fast with the JBoss Business Rules Engine Drools Expert and KIE Components
 

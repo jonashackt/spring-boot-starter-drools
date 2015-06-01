@@ -11,7 +11,6 @@ Just import this spring-boot-starter as dependency in your pom-File and things s
 There´s no official maven-repo-release, so you can use [jitpack]
 
 [![JitPack Status](https://img.shields.io/github/tag/jonashackt/spring-boot-starter-drools.svg?label=JitPack)](https://jitpack.io/#jonashackt/spring-boot-starter-drools)
-
 [![Release](https://img.shields.io/github/tag/jonashackt/spring-boot-starter-drools.svg?label=maven)](https://jitpack.io/#jonashackt/spring-boot-starter-drools)
 
 Step 1. Add the JitPack repository to your build file  
@@ -22,12 +21,12 @@ Step 1. Add the JitPack repository to your build file
 </repository>
 ```
 	
-Step 2. Add the dependency in the form 
+Step 2. Add the dependency in the form (change version to actual commit-id you can lookup [here](https://jitpack.io/#jonashackt/spring-boot-starter-drools)
 ```xml
 <dependency>
     <groupId>com.github.User</groupId>
     <artifactId>mule-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>225907afae</version>
 </dependency>
 ```
 

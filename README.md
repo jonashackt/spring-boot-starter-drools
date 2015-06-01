@@ -25,7 +25,7 @@ Step 2. Add the dependency in the form (change version to actual commit-id you c
 ```xml
 <dependency>
     <groupId>com.github.User</groupId>
-    <artifactId>mule-spring-boot-starter</artifactId>
+    <artifactId>spring-boot-starter-drools</artifactId>
     <version>225907afae</version>
 </dependency>
 ```

@@ -1,6 +1,6 @@
+# spring-boot-starter-drools
 [![Build Status](https://travis-ci.org/jonashackt/spring-boot-starter-drools.svg?branch=master)](https://travis-ci.org/jonashackt/spring-boot-starter-drools)
 
-# spring-boot-starter-drools
 Spring Boot Starter for booting fast with the JBoss Business Rules Engine Drools Expert and KIE Components
 
 ### Howto
@@ -8,5 +8,39 @@ See the Testclass for how to use the drools-api (it's basicly the KieSession you
 
 Just import this spring-boot-starter as dependency in your pom-File and things should work.
 
-###Improve
+There´s no official maven-repo-release, so you can use [jitpack]
+
+[![JitPack Status](https://img.shields.io/github/tag/jonashackt/spring-boot-starter-drools.svg?label=JitPack)](https://jitpack.io/#jonashackt/spring-boot-starter-drools)
+
+[![Release](https://img.shields.io/github/tag/jonashackt/spring-boot-starter-drools.svg?label=maven)](https://jitpack.io/#jonashackt/spring-boot-starter-drools)
+
+Step 1. Add the JitPack repository to your build file  
+```xml
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+```
+	
+Step 2. Add the dependency in the form 
+```xml
+<dependency>
+    <groupId>com.github.User</groupId>
+    <artifactId>mule-spring-boot-starter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
+
+### Improve
 * Errorhandling of Rules-Editing is bad (getting Cast-Exceptions, when Rules aren´t correctly defined - what happens 1000times while developing...)
+
+### Drools Eclipse/STS tooling
+* if you´re using Spring Tool Suite, be shure you have 3.6.4 or higher, otherwise you get an installation error with drools described on [stackoverflow]
+* install drools with [droolsupdatesite] for 6.2.0.Final or if the version is old, get the newest from [droolsdownload]:
+
+![droolsEclipseTools](droolsEclipseTools.png)
+
+[jitpack]:https://jitpack.io/
+[stackoverflow]:http://stackoverflow.com/questions/28847975/eclipse-missing-requirement-e4-rcp-patch-when-installing-properties-editor
+[droolsupdatesite]:http://download.jboss.org/drools/release/6.2.0.Final/org.drools.updatesite/
+[droolsdownload]:http://www.drools.org/download/download.html

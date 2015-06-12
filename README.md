@@ -19,7 +19,7 @@ Step 1. Add the JitPack repository to your build file
 </repository>
 ```
 	
-Step 2. Add the dependency in the form (change version to actual commit-id you can lookup [here](https://jitpack.io/#jonashackt/spring-boot-starter-drools)
+Step 2. Add the dependency in the form (change version to actual commit-id you can lookup [here](https://jitpack.io/#jonashackt/spring-boot-starter-drools))
 ```xml
 <dependency>
     <groupId>com.github.User</groupId>
@@ -29,7 +29,7 @@ Step 2. Add the dependency in the form (change version to actual commit-id you c
 ```
 
 ### Improve
-* Errorhandling of Rules-Editing is bad (getting Cast-Exceptions, when Rules aren´t correctly defined - what happens 1000times while developing...)
+* Error handling of Rules-Editing is bad (getting Cast-Exceptions, when Rules aren´t correctly defined - which happens 1000 times while developing...)
 
 ### Drools Eclipse/STS tooling
 * if you´re using Spring Tool Suite, be shure you have 3.6.4 or higher, otherwise you get an installation error with drools described on [stackoverflow]

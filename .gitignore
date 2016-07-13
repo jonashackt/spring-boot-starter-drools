@@ -16,4 +16,7 @@ target
 .DS_Store
 
 # Intellij #
-.idea
+/.idea
+/*.iml
+/*.iws
+/*.ipr

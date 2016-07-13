@@ -1,59 +1,59 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.codecentric</groupId>
-	<artifactId>spring-boot-starter-drools</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
-	<name>spring-boot-starter-drools</name>
-	<description>Boot starter for JBoss Business Rules Engine Drools Expert and KIE Components</description>
-	<packaging>jar</packaging>
-	<url>https://github.com/jonashackt/spring-boot-starter-drools</url>
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://opensource.org/licenses/Apache-2.0</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-			<name>Jonas Hecht</name>
-			<email>jonas.hecht@codecentric.de</email>
-			<organization>codecentric AG</organization>
-		</developer>
-	</developers>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.codecentric</groupId>
+    <artifactId>spring-boot-starter-drools</artifactId>
+    <version>0.1.1-SNAPSHOT</version>
+    <name>spring-boot-starter-drools</name>
+    <description>Boot starter for JBoss Business Rules Engine Drools Expert and KIE Components</description>
+    <packaging>jar</packaging>
+    <url>https://github.com/nikos/spring-boot-starter-drools</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Jonas Hecht</name>
+            <email>jonas.hecht@codecentric.de</email>
+            <organization>codecentric AG</organization>
+        </developer>
+    </developers>
 
-	<scm>
-		<connection>scm:git:git://github.com/jonashackt/spring-boot-starter-drools.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/jonashackt/spring-boot-starter-drools.git</developerConnection>
-		<url>https://github.com/jonashackt/spring-boot-starter-drools</url>
-	</scm>
-	
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-	
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<spring.boot.version>1.3.6.RELEASE</spring.boot.version>
-		<spring.version>4.2.7.RELEASE</spring.version>
-		<drools.version>6.4.0.Final</drools.version>
+    <scm>
+        <connection>scm:git:git://github.com/nikos/spring-boot-starter-drools.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/nikos/spring-boot-starter-drools.git</developerConnection>
+        <url>https://github.com/nikos/spring-boot-starter-drools</url>
+  </scm>
 
-		<build-plugin.jacoco.version>0.7.7.201606060606</build-plugin.jacoco.version>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring.boot.version>1.3.6.RELEASE</spring.boot.version>
+        <spring.version>4.2.7.RELEASE</spring.version>
+        <drools.version>6.4.0.Final</drools.version>
+
+        <build-plugin.jacoco.version>0.7.7.201606060606</build-plugin.jacoco.version>
         <build-plugin.coveralls.version>4.2.0</build-plugin.coveralls.version>
-	</properties>
+    </properties>
 
-   <dependencies>
+    <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
-		
-		<!-- Drools Expert and KIE Components -->
-		<dependency>
+
+        <!-- Drools Expert and KIE Components -->
+        <dependency>
             <groupId>org.kie</groupId>
             <artifactId>kie-spring</artifactId>
             <version>${drools.version}</version>
@@ -61,93 +61,120 @@
             	 and while http://books.sonatype.com/mvnref-book/reference/pom-relationships-sect-project-dependencies.html
             	 is not working for us, we need to exclude the 3.2-dependencies -->
             <exclusions>
-            	<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-tx</artifactId>
-            	</exclusion>
-            	<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-beans</artifactId>
-            	</exclusion>
-            	<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-core</artifactId>
-            	</exclusion>
-            	<exclusion>
-            		<groupId>org.springframework</groupId>
-            		<artifactId>spring-context</artifactId>
-            	</exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-tx</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
-		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-compiler</artifactId>
-			<version>${drools.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-compiler</artifactId>
+            <version>${drools.version}</version>
+        </dependency>
 
-		<!-- Test -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring.boot.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
-			<scope>compile</scope>
-		</dependency>
+        <!-- Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
-   </dependencies>
-	
+    </dependencies>
+
     <build>
         <plugins>
-        	<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8.1</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.3</version>
-				<configuration>
-					<localCheckout>true</localCheckout>
-					<pushChanges>false</pushChanges>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-			<plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.8.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <localCheckout>true</localCheckout>
+                    <pushChanges>false</pushChanges>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <serverId>nexus</serverId>
+                    <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+                    <skipStaging>true</skipStaging>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${build-plugin.jacoco.version}</version>
@@ -178,10 +205,10 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>${build-plugin.coveralls.version}</version>
             </plugin>
-		</plugins>
+        </plugins>
     </build>
-    
-     <repositories>
+
+    <repositories>
         <repository>
             <id>spring-releases</id>
             <name>Spring Releases</name>
@@ -194,5 +221,16 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
-  
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://localhost:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>

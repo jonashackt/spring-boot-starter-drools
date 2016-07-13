@@ -1,5 +1,9 @@
 *.class
 
+# Maven #
+/release.properties
+/pom.xml.releaseBackup
+
 # Package Files #
 *.jar
 *.war

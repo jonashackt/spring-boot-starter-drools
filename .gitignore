@@ -1,5 +1,9 @@
 *.class
 
+# Maven #
+/release.properties
+/pom.xml.releaseBackup
+
 # Package Files #
 *.jar
 *.war
@@ -16,4 +20,7 @@ target
 .DS_Store
 
 # Intellij #
-.idea
+/.idea
+/*.iml
+/*.iws
+/*.ipr

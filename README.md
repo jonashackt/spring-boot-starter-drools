@@ -22,7 +22,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency in the form (change version to actual commit-id you can lookup [here](https://jitpack.io/#jonashackt/spring-boot-starter-drools))
 ```xml
 <dependency>
-    <groupId>com.github.User</groupId>
+    <groupId>com.github.jonashackt</groupId>
     <artifactId>spring-boot-starter-drools</artifactId>
     <version>225907afae</version>
 </dependency>

@@ -39,7 +39,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.boot.version>1.3.6.RELEASE</spring.boot.version>
         <spring.version>4.2.7.RELEASE</spring.version>
-        <drools.version>6.4.0.Final</drools.version>
+        <drools.version>7.2.0.Final</drools.version>
 
         <build-plugin.jacoco.version>0.7.7.201606060606</build-plugin.jacoco.version>
         <build-plugin.coveralls.version>4.2.0</build-plugin.coveralls.version>

@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.codecentric</groupId>
     <artifactId>spring-boot-starter-drools</artifactId>
@@ -26,7 +27,7 @@
         <connection>scm:git:git://github.com/nikos/spring-boot-starter-drools.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/nikos/spring-boot-starter-drools.git</developerConnection>
         <url>https://github.com/nikos/spring-boot-starter-drools</url>
-  </scm>
+    </scm>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -39,8 +40,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.boot.version>1.3.6.RELEASE</spring.boot.version>
         <spring.version>4.2.7.RELEASE</spring.version>
-        <drools.version>6.4.0.Final</drools.version>
-
+        <drools.version>7.1.0.Final</drools.version>
         <build-plugin.jacoco.version>0.7.7.201606060606</build-plugin.jacoco.version>
         <build-plugin.coveralls.version>4.2.0</build-plugin.coveralls.version>
     </properties>
@@ -143,8 +143,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>

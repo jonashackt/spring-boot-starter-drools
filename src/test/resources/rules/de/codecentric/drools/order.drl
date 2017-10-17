@@ -1,0 +1,12 @@
+package de.codecentric.drools
+
+import de.codecentric.drools.test.model.Order
+
+rule "Amount is less than 100"
+
+    when
+        $o: Order(amount < 100)
+
+    then
+        System.out.println("You'll get a discount on your next order");
+ end

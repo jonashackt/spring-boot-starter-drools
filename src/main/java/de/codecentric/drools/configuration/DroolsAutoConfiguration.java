@@ -1,6 +1,7 @@
 package de.codecentric.drools.configuration;
 
 import java.io.IOException;
+import java.net.URI;
 
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;
@@ -30,7 +31,10 @@ public class DroolsAutoConfiguration {
     public KieFileSystem kieFileSystem() throws IOException {
         KieFileSystem kieFileSystem = getKieServices().newKieFileSystem();
         for (Resource file : getRuleFiles()) {
-            kieFileSystem.write(ResourceFactory.newClassPathResource(RULES_PATH + file.getFilename(), "UTF-8"));
+            URI uri = file.getURI();
+            String path = uri.getPath();
+            String classpathRessourcePath = path.substring(path.indexOf(RULES_PATH));
+            kieFileSystem.write(ResourceFactory.newClassPathResource(classpathRessourcePath, "UTF-8"));
         }        
         return kieFileSystem;
     }

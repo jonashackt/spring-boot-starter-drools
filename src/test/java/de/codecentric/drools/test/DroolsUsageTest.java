@@ -1,7 +1,8 @@
 package de.codecentric.drools.test;
 
-import static org.junit.Assert.assertEquals;
-
+import de.codecentric.drools.TestApplication;
+import de.codecentric.drools.test.model.Address;
+import de.codecentric.drools.test.model.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.runtime.KieSession;
@@ -11,9 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import de.codecentric.drools.TestApplication;
-import de.codecentric.drools.test.model.Address;
-import de.codecentric.drools.test.model.Order;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = TestApplication.class)
@@ -53,7 +52,7 @@ public class DroolsUsageTest {
                 
         // Then     
         assertEquals("there´s 0 rule, thats meets the condition, so there should be 0 applied", 0, ruleFiredCount);
-        LOG.debug("Rules checked: {}" + ruleFiredCount);
+        LOG.debug("Rules checked: {}", ruleFiredCount);
     }
     
     
@@ -76,7 +75,19 @@ public class DroolsUsageTest {
                 
         // Then     
         assertEquals("there are 2 rules, which meet the condition, so there should be 2 applied", 2, ruleFiredCount);
-        LOG.debug("Rules checked: {}" + ruleFiredCount);
+        LOG.debug("Rules checked: {}", ruleFiredCount);
+    }
+
+    @Test
+    public void orderWithAmountLess100() {
+        Order order = new Order();
+        order.setAmount(99);
+
+        kieSession.insert(order);
+        int ruleFiredCount = kieSession.fireAllRules();
+
+        assertEquals("there is 1 rule, which met the condition, so there should be 1 applied", 1, ruleFiredCount);
+        LOG.debug("Rules checked: {}", ruleFiredCount);
     }
     
     

@@ -41,8 +41,8 @@
         <spring.version>4.2.7.RELEASE</spring.version>
         <drools.version>6.4.0.Final</drools.version>
 
-        <build-plugin.jacoco.version>0.7.7.201606060606</build-plugin.jacoco.version>
-        <build-plugin.coveralls.version>4.2.0</build-plugin.coveralls.version>
+        <build-plugin.jacoco.version>0.8.4</build-plugin.jacoco.version>
+        <build-plugin.coveralls.version>4.3.0</build-plugin.coveralls.version>
     </properties>
 
     <dependencies>
